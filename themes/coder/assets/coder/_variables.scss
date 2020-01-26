@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Novacento Sans Wide';
+    src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot");
+    src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff2") format("woff2"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-UltraLight-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-UltraLight-webfont.svg#novecento_sans_wideultralight") format("svg");
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Iosevka Term SS01';
+    src: url("../fonts/iosevka-term-ss01-light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Daytona';
+    src: url("../fonts/Daytona_Thin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 200;
+}
+// Fonts
+
+$text-font-family: 'Daytona', Georgia, serif;
+$heading-font-family: 'Daytona', Helvetica, sans-serif;
+$thin-font-family: 'Novacento Sans Wide', Helvetica, sans-serif;
+$code-font-family: 'Iosevka Term SS01', 'Lucida Console', monospace;
+
+:root{
+    --bg-color: #080a0f;
+    --fg-color: #fafafa;
+    --accent-color: #ff9000;
+    --glitch-color: var(--fg-color);
+    --titlecolor: var(--fg-color);
+    --titleback: var(--bg-color);
+}
+
+$glitchsize: 1px;
+
+$bg-color: var(--bg-color);
+$fg-color: var(--fg-color);
+$accent-color: var(--accent-color);
+$glitch-color: var(--glitch-color);
+
+@mixin duplicate {
+        content: attr(data-text);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+}
+
+@mixin textGlitch($name, $intensity, $textColor, $background, $highlightColor1, $highlightColor2, $width, $height) {
+    color: $textColor;
+    position: relative;
+    $steps: $intensity;
+
+    @at-root {
+        @for $i from 1 through 2 {
+        @keyframes #{$name}-anim-#{$i} {
+            @for $i from 0 through $steps {
+            $top: random(100);
+            $bottom: random(101 - $top);
+            #{percentage($i*(1/$steps))} {
+                clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+            }
+            }
+        }
+        }
+    }
+    &::before,
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: $background;
+    }
+    &::after {
+        left: 2px;
+        text-shadow: -1px 0 $highlightColor1;
+        animation: #{$name}-anim-1 1s infinite linear alternate-reverse;
+    }
+    &::before {
+        right: 2px;
+        text-shadow: 2px 0 $highlightColor2; 
+        animation: #{$name}-anim-2 1s infinite linear alternate-reverse;
+    }
+}
+
+@mixin imgGlitch($name, $intensity, $width, $height, $top, $left) {
+  $steps: $intensity;
+  // Ensure the @keyframes are generated at the root level
+  @at-root {
+    // We need two different ones
+    @for $i from 1 through 2 {
+      @keyframes #{$name}-anim-#{$i} {
+        @for $i from 0 through $steps {
+          $top: random(100);
+          $bottom: random(101 - $top);
+          #{percentage($i*(1/$steps))} {
+            clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+          }
+        }
+      }
+    }
+  }
+  > img {
+    position: absolute;
+    top: $top+px;
+    left: $left+px;
+  }
+  > img:nth-child(2),
+  > img:nth-child(3){
+  }
+  > img:nth-child(2) {
+    left: ($left + 2) + px;
+    animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
+  }
+  > img:nth-child(3) {
+    left: ($left - 2) + px;
+    animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
+  }
+}
+
+
+
+@mixin svgGlitch($name, $intensity, $fillColor, $background, $fillHighlight1, $fillHighlight2, $width, $height, $top, $left) {
+  $steps: $intensity;
+  // Ensure the @keyframes are generated at the root level
+  @at-root {
+    // We need two different ones
+    @for $i from 1 through 2 {
+      @keyframes #{$name}-anim-#{$i} {
+        @for $i from 0 through $steps {
+          $top: random(100);
+          $bottom: random(101 - $top);
+          #{percentage($i*(1/$steps))} {
+            clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+          }
+        }
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    top: $top+px;
+    left: $left+px;
+    fill: $fillColor;
+    background: $background;
+    width: $width+px;
+    height: $height+px;
+  }
+  svg:nth-child(2),
+  svg:nth-child(3) {
+  }
+  svg:nth-child(2) {
+    fill: $fillHighlight1;
+    left: ($left - 2) + px;
+    animation: #{$name}-anim-1 2s infinite linear alternate-reverse;
+  }
+  svg:nth-child(3) {
+    fill: $fillHighlight2;
+    left: ($left + 2) + px;
+    animation: #{$name}-anim-2 3s infinite linear alternate-reverse;
+  }
+}

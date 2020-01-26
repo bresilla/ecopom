@@ -1,0 +1,40 @@
+.footer {
+  width: 100%;
+  font-family: $code-font-family;
+  font-weight: 900;
+  line-height: 2.0rem;
+  margin-bottom:1.0rem;
+  font-size: 1.7rem;
+  a {
+    color: $fg-color;
+    text-decoration: none;
+    :hover {
+        color: $accent-color;
+    }
+  }
+  p {
+    margin: 2rem 0 .1rem;
+    text-align: center;
+    }
+    @media only screen and (max-width : 768px) {
+        display: none;
+        visibility: hidden;
+    }
+    @media only screen and (min-width : 768px) {
+        p {
+            background:
+                linear-gradient(to bottom, var(--accent-color) 0%, var(--accent-color) 100%);
+                background-position: 100% 0;
+                background-repeat: repeat-x;
+                background-size: 1px 1px;
+            text-decoration: none;
+            transition: background-size .5s, color .5s;
+            padding: 4px;
+            padding-top: 6px;
+        }
+        p:hover {
+            color: var(--bg-color);
+            background-size: 4px 50px;
+        }
+    }
+}

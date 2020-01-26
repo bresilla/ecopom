@@ -1,0 +1,14 @@
+{{ define "body" }}
+    {{ $type := .Params.type }}
+    {{ if eq $type "talk" }}
+        {{ partial "content/single/talk.html" . }}
+    {{ else }}
+    <main id="main" class="wrapper {{ .Slug }}">
+        {{ partial "header.html" . }}
+        <div class="content">
+            {{ block "content" . }}{{ end }}
+        </div>
+        {{ partial "footer.html" . }}
+    </main>
+    {{ end }}
+{{ end }}

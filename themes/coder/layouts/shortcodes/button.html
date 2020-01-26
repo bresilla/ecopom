@@ -1,0 +1,72 @@
+<div id="nodec" class="box-1 titleflex" style="justify-content: {{ .Get "position" }};" >
+    <a href="{{ .Get "url" }}" >
+        <div class="btn btn-two">
+            <span>{{ .Get "text" }}</span>
+        </div>
+    </a>
+<style>
+    div[class*=box] {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+    .btn {
+        line-height: 50px;
+        height: 50px;
+        text-align: center;
+        width: 250px;
+        cursor: pointer;
+    }
+    #nodec .box-1{
+        a:hover{
+            color: var(--accent-color);
+        }
+    }
+    .btn-two {
+        transition: all 0.5s;
+        position: relative;
+        :hover {
+            color: var(--accent-color);
+        }
+    }
+    .btn-two::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(255,255,255,0.1);
+        transition: all 0.3s;
+    }
+    .btn-two:hover::before {
+        opacity: 0 ;
+        transform: scale(0.5,0.5);
+    }
+    .btn-two::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border: 1px solid var(--accent-color);
+        transform: scale(1.2,1.2);
+    }
+    .btn-two:hover::after {
+        opacity: 1;
+        transform: scale(1,1);
+    }
+    .progress_main {
+        overflow:hidden;
+        div {
+            min-height: 2%;
+        }
+    }
+</style>
+</div>

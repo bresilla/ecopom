@@ -1,0 +1,354 @@
+@import "../coder/_variables.scss";
+@import "../coder/_base.scss";
+@import "../coder/_footer.scss";
+@import "../coder/_navigation.scss";
+
+$accent: var(--accent-color);
+$backcolor: var(--bg-color);
+$forecolor: var(--fg-color);
+
+a, a:active, a:focus {
+    outline:none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    background-color: #00000000;
+    padding: 0;
+}
+
+a:focus, a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.estate {
+    max-width: 150rem;
+    padding: 2% 0 2% 0;
+}
+
+
+.cv {
+  background: var(--bg-color);
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 900;
+}
+
+
+.sidebar-wrapper {
+  background: $accent;
+  position: absolute;
+  right: 0;
+  width: 270px;
+  height: 95%;
+  min-height: 800px;
+  color: #080a0f;
+  line-height: 1em;
+
+  hr {
+        border-top: 1px solid var(--bg-color);
+  }
+
+  a {
+    color: #080a0f;
+  }
+
+  .profile-container {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+
+  .name {
+    color: $backcolor;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .tagline {
+    color: $backcolor;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .profile {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .contact-list {
+    .fa {
+      margin-right: 5px;
+      font-size: 18px;
+      vertical-align: middle;
+    }
+
+    li {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .email .fa {
+      font-size: 14px;
+    }
+  }
+
+  .container-block {
+    padding: 30px;
+  }
+
+  .container-block-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: $backcolor;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 20px;
+    .fa {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+      display: inline-block;
+      color: $accent;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      background: $backcolor;
+      text-align: center;
+      padding-top: 8px;
+      font-size: 16px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .degree {
+    color: $backcolor;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .education-container {
+    .item {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .meta {
+      font-style: italic;
+      font-size: 14px;
+      margin-bottom: 0px;
+      margin-top: 0;
+      color: $backcolor;
+    }
+
+    .time {
+      font-style: italic;
+      margin-bottom: 0px;
+    }
+  }
+
+  .language-container .lang-desc {
+      font-style: italic;
+  }
+
+  .languages-list, .interests-list {
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.main-wrapper {
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  padding-right: 300px;
+  page-break-before: always;
+  color: forecolor;
+
+  hr {
+        border-top: 1px solid var(--accent-color);
+  }
+
+  .section-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: $accent;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    .fa {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+      display: inline-block;
+      color: #080a0f;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -moz-background-clip: padding;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      background: $accent;
+      text-align: center;
+      padding-top: 8px;
+      font-size: 16px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .section {
+    margin-bottom: 60px;
+    page-break-inside: avoid;
+  }
+
+  .experiences-section .item {
+    margin-bottom: 30px;
+  }
+
+  .upper-row {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2px;
+  }
+
+  .job-title {
+    color: $accent;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .time {
+    position: absolute;
+    right: 0;
+    font-style: italic;
+    top: 0;
+    color: $accent;
+  }
+
+  .company {
+    font-style: italic;
+    margin-bottom: 10px;
+    color:  $accent;
+  }
+
+  .project-title {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .projects-section {
+    .intro {
+      margin-bottom: 30px;
+    }
+
+    .item {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.skillset {
+  .item {
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+
+  .level-title {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .level-bar {
+    height: 12px;
+    background: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  .level-bar-inner {
+    height: 12px;
+    background: $accent !important;
+  }
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+
+    .cv {
+        padding: 20px;
+    }
+  .sidebar-wrapper {
+    position: static;
+    width: inherit;
+    height: initial;
+  }
+
+  .main-wrapper {
+    padding: 30px;
+
+    .time {
+      position: static;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .upper-row {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) ** Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .skillset {
+    .level-title {
+      display: inline-block;
+      float: left;
+      width: 30%;
+      margin-bottom: 0;
+    }
+
+    .level-bar {
+      display: inline-block;
+      width: 70%;
+      float: left;
+      position: relative;
+      top: 1px;
+    }
+  }
+}

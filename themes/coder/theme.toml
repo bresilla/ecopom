@@ -1,0 +1,24 @@
+name = "Coder"
+license = "MIT"
+licenselink = "https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.md"
+tags = [
+  "blog",
+  "minimal",
+  "minimalist",
+  "responsive",
+  "simple",
+  "clean",
+  "personal"
+]
+features = [
+  "analytics",
+  "favicon",
+  "pagination",
+  "single-column",
+  "syntax-highlighting"
+]
+min_version = "0.54"
+
+[author]
+  name = "Trim Bresilla"
+  homepage = "www.bresilla.com"

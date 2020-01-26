@@ -1,0 +1,18 @@
+{{ $width := default "48" (.Get "width") }}
+{{ $shadow := default "#181818" (.Get "shadow") }}
+{{ $radius := default "10" (.Get "radius") }}
+{{ $border := default "1" (.Get "border") }}
+<div class="imageframeholder" style="width: 100vw; position: relative; left: calc(-50vw + 50%);" >
+    <div class="imageimageframe" style="
+        width: {{ $width }}%;
+        margin: 0 auto; height:100%;
+        border-radius: {{ $radius }}px;
+        box-shadow:1px 1px 20px 3px {{ $shadow }};
+        border: {{ $border }}px solid {{ if (.Get "color") }} {{ .Get "color" }} {{ else }} var(--accent-color) {{ end }};
+        background-image: url({{ .Get "url" }});
+        background-size: cover;" >
+        <style> @media only screen and (max-width : 768px) { .imageimageframe { width: 90% !important; } } </style>
+        <img src="{{ .Get "url" }}" alt="" style="visibility: hidden;, height=100%;" >
+    </div>
+        <div class="imagetextframe" style="text-align: center; font-style: italic; font-weight: 300; margin-top:.2%; margin-bottom: 1%;" >{{ .Inner }}</div>
+</div>

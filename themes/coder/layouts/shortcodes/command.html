@@ -1,0 +1,10 @@
+<div class="commandframeholder" >
+    {{ $width := default "100" (.Get "width") }}
+    {{ $type := default "" (.Get "type") }}
+    {{ $radius := default "5" (.Get "radius") }}
+    <div class="textframe{{ $type }}" style="width: {{ $width }}%; margin: 0 auto; padding: 1%; border-radius: {{ $radius }}px;
+        {{ if (.Get "color") }} background-color: {{ .Get "color" }} {{ else }} background-color: var(--accent-color) {{ end }};
+        {{ if (.Get "font") }} color: {{ .Get "font" }} {{ else }} color: var(--bg-color) {{ end }};
+        " > &nbsp;&nbsp;$&nbsp;&nbsp;{{ .Inner }}</div>
+</div>
+

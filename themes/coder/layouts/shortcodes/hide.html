@@ -1,0 +1,17 @@
+<div class="hideframeholder" style="width: 100vw; position: relative; left: calc(-50vw + 50%); height=100%;" >
+    {{ $width := default "40" (.Get "width") }}
+    {{ $type := default "note" (.Get "type") }}
+    {{ $radius := default "5" (.Get "radius") }}
+    <div class="hide{{ $type }}" style="width:{{ $width }}%; margin: 0 auto; padding:.1%; border-radius:{{ $radius }}px; border: 1px solid var(--accent-color); color:var(--bg-color); background:linear-gradient(var(--bg-color) 0%, var(--bg-color) 3.8em, var(--accent-color) 3.8em, var(--accent-color) 100%);" >
+        <div style="border: 2px dashed var(--bg-color); border-radius: {{ $radius }}px; padding:.9%;" >
+            <details>
+            <summary style="font-size:1.2em; color:var(--accent-color);" >{{ $type }}</summary>
+            <div style="padding-top:2em;" >
+                {{ .Inner }}
+            </div>
+            </details>
+        </div>
+    </div>
+<style> @media only screen and (max-width : 768px) { .hide{{ $type }} { width: 90% !important; } } </style>
+</div>
+

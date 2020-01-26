@@ -1,0 +1,116 @@
+baseurl = "/"
+title = "ecopom"
+theme = "coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+publishDir = "./docs"
+
+paginate = 20
+canonifyurls = true
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+pygmentsUseClasses=true
+
+disqusShortname = "kushtrimbresilla"
+
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+    [markup.tableOfContents]
+        startLevel = 1
+        endLevel = 4
+        ordered = false
+
+[params]
+    name = "ECOPOM"
+    author = "ECOPOM"
+    mail = "trim.bresilla@bresilla.com"
+    phone = "+38344171997"
+    gradient = "red, green, blue"
+
+    description = "LAB - Website"
+    keywords = "blog,news,oppurtitnities,lab"
+    info = "eco-physiology and precision orchard management"
+    info2 = "LAB at UNIBO"
+    avatarurl = "/images/logo.png"
+    favicon = "/images/favicon.svg"
+    namelogo = "/images/name.svg"
+    foot = "ALMA MATER STUDIORUM UNIVERSITA DI BOLOGNA"
+    url = "https://www.unibo.it/en"
+    dateformat = "2 January 2006"
+
+
+    hideCredits = false
+    hideCopyright = false
+    commit = "https://github.com/luizdepra/hugo-coder/tree/"
+    rtl = false
+    inverted = false
+    maxSeeAlsoItems = 5
+    custom_css = []
+    custom_js = []
+
+[params.style]
+    accent = "#bb2e29"
+    theme = "light"
+    fg = "#080a0f"
+    bg = "#c4d0d1"
+    image = "/images/main_bak.jpg"
+
+[taxonomies]
+  type = "type"
+  category = "categories"
+  folder = "folder"
+  series = "series"
+  tag = "tags"
+
+[[params.social]]
+  name = "Web"
+  unicode = ""
+  icon = "fab fa-reddit"
+  weight = 6
+  url = "https://www.reddit.com/user/bresilla"
+[[params.social]]
+    name = "LinkedIn"
+    unicode = ""
+    icon = "fab fa-linkedin"
+    weight = 3
+    url = "https://www.linkedin.com/in/bresilla/"
+[[params.social]]
+    name = "Twitter"
+    unicode = ""
+    icon = "fab fa-twitter"
+    weight = 4
+    url = "https://twitter.com/ecopom/"
+[[params.social]]
+    name = "Youtube"
+    unicode = ""
+    icon = "fab fa-youtube-square"
+    weight = 5
+    url = "https://www.youtube.com/channel/UCgx55pjpHgsHwIxexiunA5w?view_as=subscriber"
+
+[[menu.main]]
+    name = "about"
+    weight = 1
+    url = "about/"
+
+[[menu.main]]
+    name = "team"
+    weight = 2
+    url = "team"
+
+[[menu.main]]
+    name = "posts"
+    weight = 4
+    url = "posts/"
+
+[[menu.main]]
+    name = "news"
+    weight = 5
+    url = "news/"

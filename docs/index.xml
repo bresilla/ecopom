@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ecopom</title>
+    <link>/</link>
+    <description>Recent content on ecopom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hosting a website in the Inter Planetary File System</title>
+      <link>/posts/linux/web-ipfs/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/linux/web-ipfs/</guid>
+      <description>THE WHY Here is the thing, I have no secrets of my own! Zero, zilch, zip, nada, nothing. However, this does not mean I am open to anyone to browse what I do and how I do. I like my life to be private. If somebody asks me anything (even a personal query), and if I find it reasonable (which most of the cases I do), I give the answer. I am very careful about what share and how I share.</description>
+    </item>
+    
+    <item>
+      <title>Backing up GPG key with YubiKey, Tomb and Cryptosetup</title>
+      <link>/posts/linux/gpg-yubikey-tomb/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/linux/gpg-yubikey-tomb/</guid>
+      <description>In this short post, i will show how to generate secure GPG keys using secure liunx enviroiment and other secure linux tools.
+Steps that we&#39;&amp;lsquo;ll go through are:
+ Generate a live secure enviroiment (TAILS) Generate GPG-Keys Diging secure tombs and forging keys Backing-up keys and revocation certificates Backing up keys in crypto LUKS drive  SECURE ENVIRONMENT Lets make a working folder where we create file, keys, tombs ad so on.</description>
+    </item>
+    
+    <item>
+      <title>RESUME</title>
+      <link>/resume/</link>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/resume/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Lets pretend you are a real person, and I&amp;rsquo;ll pretend to introduce myself and impress you (in third person). For your information, I am very much a real person, to prove it, there is a picture of me (seeeee, i am in the left, computer is in the right).
+$ whoami _ The name is Trim, Trim BRESILLA (pun intended), and he&amp;rsquo;s currently working as a PostDoc at University of Bologna.</description>
+    </item>
+    
+  </channel>
+</rss>

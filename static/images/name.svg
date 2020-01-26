@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="400"
+   height="100"
+   version="1.1"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="name.svg"
+   id="svg860"
+   inkscape:export-filename="/home/bresilla/DATA/CODE/PROJECTS/WARP/logo/logo.svg.png"
+   inkscape:export-xdpi="240"
+   inkscape:export-ydpi="240">
+  <rect
+     id="backgroundrect"
+     width="518.91888%"
+     height="518.91888%"
+     x="0"
+     y="63"
+     style="fill:none;stroke:none;stroke-width:5.18918896"
+     data-darkreader-inline-fill=""
+     data-darkreader-inline-stroke="" />
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="212.77089"
+     inkscape:cy="103.29819"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g6034"
+     showgrid="false"
+     inkscape:window-width="1861"
+     inkscape:window-height="2070"
+     inkscape:window-x="1965"
+     inkscape:window-y="72"
+     inkscape:window-maximized="1"
+     width="73px"
+     inkscape:snap-global="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     class="currentLayer"
+     id="g862"
+     transform="translate(0,-100)">
+    <title
+       id="title854">Layer 1</title>
+    <g
+       inkscape:label="Layer 1"
+       inkscape:groupmode="layer"
+       id="layer1"
+       class="">
+      <g
+         id="g6034"
+         transform="matrix(1.1294663,0,0,1.1294663,464.06821,-65.359997)">
+        <text
+           id="text828-8"
+           y="223.46172"
+           x="-415.09561"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.19297028px;line-height:1.25;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:2.32980895"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.19297028px;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;stroke-width:2.32980895"
+             y="223.46172"
+             x="-415.09561"
+             id="tspan826-7"
+             sodipodi:role="line"><tspan
+   id="tspan5219-0"
+   style="fill:#008000;stroke-width:2.32980895">ECO</tspan>POM</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

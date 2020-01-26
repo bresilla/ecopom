@@ -1,0 +1,90 @@
+<section class="container page estate" >
+    <article>
+        <header>
+            {{ if .Params.title }}
+                <h1 class="{{ .Slug }} title glitchtitle"  data-text="{{ .Title }}" >{{ .Title }}</h1>
+            {{ end }}
+            <!-- {{ if .Params.part }} -->
+                <!-- <h1 class="title" data-text="{{ .Params.part }}" style="display: table; padding-left:2%;" > -->
+                    <!-- <a href="" style="background-color:var(--accent-color);" onMouseOver="this.style.color='var(--bg-color)'" onMouseOut="this.style.color='var(--fg-color)'" >&nbsp;{{ .Params.part }}&nbsp;</a> -->
+                <!-- </h1> -->
+            <!-- {{ end }} -->
+            {{ if .Params.type }}
+            <div class="undertitle" style="padding-left:2%;" >
+                <details class="dropdown" >
+                    <summary>
+                        <span id="title_part" style="color:var(--bg-color); background-color:var(--accent-color); cursor: pointer; display:inline-block;" >&nbsp;INDEX&nbsp;</span>
+                        <span style="color:var(--fg-color)">|</span>
+
+                        {{ $taxo := "categories" }}
+                        <span id="title_{{ $taxo }}" style="color:var(--accent-color) display:inline-block;" >
+                            {{ if .Param $taxo }}Category: {{ end }}
+                            {{ range .Param $taxo }}
+                                {{ $name := . }}
+                                {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                                    <a href="{{ .Permalink }}" >{{ $name }}</a>
+                                {{ end }}
+                            {{ end }}
+                            <span style="color:var(--fg-color)">|</span>
+                        </span>
+                        {{ $taxo := "tags" }}
+                        <span id="title_{{ $taxo }}" style="color:var(--accent-color) display:inline-block;" >
+                            {{ if .Param $taxo }} Tags: {{ end }}
+                            {{ range .Param $taxo }}
+                                {{ $name := . }}
+                                {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                                <a href="{{ .Permalink }}" >{{ $name }}</a>
+                                {{ end }}
+                            {{ end }}
+                            <span style="color:var(--fg-color)">|</span>
+                        </span>
+
+                        {{ if .Params.link }}
+                            <span class="title_posturl" style="color:var(--accent-color) display:inline-block;" >Url: <a href="{{ .Params.link }}" > {{ .Params.link }} </a></span>
+                            <span style="color:var(--fg-color)">|</span>
+                        {{ end }}
+
+                        {{ $taxo := "series" }}
+                        <span id="title_{{ $taxo }}" style="color:var(--accent-color) display:inline-block;" >
+                            {{ if .Param $taxo }}Series: {{ end }}
+                            {{ range .Param $taxo }}
+                                {{ $name := . }}
+                                {{ with $.Site.GetPage (printf "/%s/%s" $taxo ($name | urlize)) }}
+                                <a href="{{ .Permalink }}" >{{ $name }}</a>
+                                {{ end }}
+                            {{ end }}
+                            {{ if .Params.part }}
+                                <span id="title_part" style="color:var(--bg-color); background-color:var(--accent-color); cursor: pointer;" >&nbsp;PART {{ .Params.part }}&nbsp;</span>
+                            {{ end }}
+                            <span style="color:var(--fg-color)">|</span>
+                        </span>
+                    </summary>
+                    {{ .TableOfContents }}
+                </details>
+            </div>
+            {{ end }}
+        </header>
+        <span class="{{ if .Params.type }} blogpost {{ end }}" style=" --titlecolor: var(--accent-color);" >
+            {{ .Content }}
+        </span>
+        {{ if .Params.credits }}
+        <div style="padding-top:2%;" >
+            <div style="width: 100vw; position: relative; left: calc(-50vw + 50%); height=100%;" >
+                <div class="references" style="width: 50%; margin: 0 auto; padding: .4%; border-radius: 5px; border: 2px dashed var(--accent-color); color: var(--accent-color);" >
+                <details class="references" style="padding-left:2%;" >
+                    <summary style="font-size:1.5em;" > References</summary>
+                    <div style="padding:1%;" >
+                        {{ range .Params.credits }}
+                        <div style="padding:.2%; padding-left:2%;" >
+                            - <a href="{{ . }}" > {{ . }} </a>
+                        </div>
+                        {{ end }}
+                    </div>
+                </details>
+                </div>
+                    <style> @media only screen and (max-width : 768px) { .references { width: 90% !important; } } </style>
+            </div>
+        </div>
+        {{ end }}
+    </article>
+</section>

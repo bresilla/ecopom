@@ -1,0 +1,25 @@
+<div class="mainflex" >
+    <div class="innerflex" >
+        {{ .Inner }}
+    </div>
+    <style>
+        .mainflex{
+            width:100%;
+        }
+        .mainflex .innerflex{
+            text-align:center;
+            min-width: 140px;
+        }
+        .mainflex .innerflex a:after {
+            border: 0px;
+        }
+        .mainflex .innerflex .tileflex{
+            margin:10px;
+            height: 20%;
+            width: 20%;
+            color: var(--bg-color);
+            background: var(--accent-color);
+            display: inline-block;
+        }
+    </style>
+</div>

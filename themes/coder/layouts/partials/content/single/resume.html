@@ -1,0 +1,112 @@
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}font-awesome/css/font-awesome.css">
+    {{ $cssOpts := (dict "targetPath" "css/resume.css" ) }}
+    {{ $styles := resources.Get "resume/style.scss" | resources.ExecuteAsTemplate "style.coder.css" . | toCSS $cssOpts | minify }}
+    <link id="theme-style" rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen" />
+    <main id="main" class="wrapper {{ .Slug }}">
+        <div class="cv estate" >
+            <div class="sidebar-wrapper">
+                <div class="profile-container">
+                    <img class="profile img-circle" src="{{ .Site.BaseURL }}images/profile_02.jpg" alt="" />
+                    <h1 class="name">{{ .Site.Params.author }}</h1>
+
+                    <h3 class="tagline">{{ .Site.Params.info }}</h3>
+                </div><!--//profile-container-->
+
+                <div class="contact-container container-block">
+                    <ul class="list-unstyled contact-list">
+                    {{ range .Site.Params.cv.contact.list }}
+                        <li class="{{ .class }}"><i class="fa {{ .icon }}"></i><a href="{{ .url }}">{{ .title }}</a></li>
+                    {{ end }}
+                    </ul>
+                </div><!--//contact-container-->
+                <div class="education-container container-block">
+                    <h2 class="container-block-title"><i class="fa {{ .Site.Params.cv.education.icon }}"></i>EDUCATION</h2>
+                    {{ range .Site.Params.cv.education.list }}
+                    <div class="item">
+                        <h4 class="degree">{{ .degree }}</h4>
+                        <h5 class="meta">{{ .college }}</h5>
+                        <div class="time">{{ .dates }}</div>
+                    </div><!--//item-->
+                    <hr>
+                    {{ end }}
+                </div><!--//education-container-->
+                <div class="language-container container-block">
+                    <h2 class="container-block-title"><i class="fa {{ .Site.Params.cv.language.icon }}"></i>LANGUAGES</h2>
+                    <ul class="list-unstyled interests-list">
+                    {{ range .Site.Params.cv.language.list }}
+                        <li>{{ .language }} <span class="lang-desc">({{ .level }})</span></li>
+                    {{ end }}
+                    </ul>
+                </div><!--//language-->
+                <div class="interests-container container-block">
+                    <h2 class="container-block-title"><i class="fa {{ .Site.Params.cv.interests.icon }}"></i>INTERESTS</h2>
+                    <ul class="list-unstyled interests-list">
+                    {{ range .Site.Params.cv.interests.list }}
+                        <li>{{ .interest }}</li>
+                    {{ end }}
+                    </ul>
+                </div><!--//interests-->
+            </div><!--//sidebar-wrapper-->
+            <div class="main-wrapper">
+                <section class="section summary-section">
+                    <h2 class="section-title"><i class="fa {{ .Site.Params.cv.summary.icon }}"></i>SUMMARY</h2>
+                    <div class="summary">
+                        <p>{{ with .Site.Params.cv.summary.summary }}{{ . | markdownify }}{{ end }}</p>
+                    </div><!--//summary-->
+                </section><!--//section-->
+                <section class="section experiences-section">
+                    <h2 class="section-title"><i class="fa {{ .Site.Params.cv.experiences.icon }}"></i>EXPERIENCE</h2>
+
+                    {{ range .Site.Params.cv.jobs.list }}
+                    <div class="item">
+                        <div class="meta">
+                            <div class="upper-row">
+                                <h3 class="job-title">{{ .position }}</h3>
+                                <div class="time">{{ .dates }}</div>
+                            </div><!--//upper-row-->
+                            <div class="company">{{ .company }}</div>
+                        </div><!--//meta-->
+                        <div class="details">
+                            <p>{{ with .details }}{{ . | markdownify }}{{ end }}</p>
+                        </div><!--//details-->
+                    </div><!--//item-->
+                    {{ end }}
+                </section><!--//section-->
+                <section class="section projects-section">
+                    <h2 class="section-title"><i class="fa {{ .Site.Params.cv.projects.icon }}"></i>PROJECTS</h2>
+                    <div class="intro">
+                        <p>{{ with .Site.Params.cv.projects.intro }}{{ . | markdownify }}{{ end }}</p>
+                    </div><!--//intro-->
+                    {{ range .Site.Params.cv.projects.list }}
+                    <div class="item">
+                        <span class="project-title"><a href="{{ .url }}">{{ .title }}</a></span> - <span class="project-tagline">{{ with .tagline }}{{ . | markdownify }}{{ end }}</span>
+                    </div><!--//item-->
+                    <hr>
+                    {{ end }}
+                </section><!--//section-->
+                <section class="skills-section section">
+                    <h2 class="section-title"><i class="fa {{ .Site.Params.cv.skills.icon }}"></i>SKILLS</h2>
+                    <div class="skillset">
+                    {{ range .Site.Params.cv.skills.list }}
+                        <div class="item">
+                            <h3 class="level-title">{{ .skill }}</h3>
+                            <div class="level-bar">
+                                <div class="level-bar-inner" data-level="{{ .level }}">
+                                </div>
+                            </div><!--//level-bar-->
+                        </div><!--//item-->
+                    {{ end }}
+                    </div>
+                </section><!--//skills-section-->
+            </div><!--//main-body-->
+        </div>
+    </main>
+    <!-- Javascript -->
+    <script type="text/javascript" src="{{ .Site.BaseURL }}jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="{{ .Site.BaseURL }}bootstrap/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="{{ .Site.BaseURL }}scripts/resume.js"></script>
+</body>

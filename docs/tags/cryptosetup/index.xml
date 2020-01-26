@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cryptosetup on ecopom</title>
+    <link>/tags/cryptosetup/</link>
+    <description>Recent content in cryptosetup on ecopom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/cryptosetup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backing up GPG key with YubiKey, Tomb and Cryptosetup</title>
+      <link>/posts/linux/gpg-yubikey-tomb/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/linux/gpg-yubikey-tomb/</guid>
+      <description>In this short post, i will show how to generate secure GPG keys using secure liunx enviroiment and other secure linux tools.
+Steps that we&#39;&amp;lsquo;ll go through are:
+ Generate a live secure enviroiment (TAILS) Generate GPG-Keys Diging secure tombs and forging keys Backing-up keys and revocation certificates Backing up keys in crypto LUKS drive  SECURE ENVIRONMENT Lets make a working folder where we create file, keys, tombs ad so on.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>front on ecopom</title>
+    <link>/type/front/</link>
+    <description>Recent content in front on ecopom</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="/type/front/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Lets pretend you are a real person, and I&amp;rsquo;ll pretend to introduce myself and impress you (in third person). For your information, I am very much a real person, to prove it, there is a picture of me (seeeee, i am in the left, computer is in the right).
+$ whoami _ The name is Trim, Trim BRESILLA (pun intended), and he&amp;rsquo;s currently working as a PostDoc at University of Bologna.</description>
+    </item>
+    
+  </channel>
+</rss>

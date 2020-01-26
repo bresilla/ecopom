@@ -1,0 +1,149 @@
+.navigation {
+height: 6.0rem;
+width: 100%;
+a, span {
+    display: inline;
+    font-size: 1.6rem;
+    font-family: $code-font-family;
+    font-weight: 900;
+    line-height: 6.0rem;
+    color: $fg-color;
+}
+a {
+    &:hover,
+    &:focus {
+    color: $accent-color
+    }
+}
+.navigation-title {
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    @media only screen and (max-width : 768px) {
+        content:'';
+    }
+}
+.navigation-list {
+    float: right;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    @media only screen and (max-width : 768px) {
+    position: absolute;
+    top: 6.0rem;
+    right: 0;
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    padding: 0;
+    max-height: 0;
+    width: 100%;
+    background-color: $bg-color;
+    border-top: solid 2px $bg-color;
+    border-bottom: solid 2px $bg-color;
+    transition: opacity 0.25s, max-height 0.15s linear;
+    }
+    .navigation-item {
+    float: left;
+    margin: 0;
+    position: relative;
+    @media only screen and (max-width : 768px) {
+        float: none !important;
+        text-align: center;
+        a, span {
+        line-height: 5.0rem;
+        }
+    }
+    a, span {
+        margin-left: 1.0rem;
+        margin-right: 1.0rem;
+    }
+    }
+    .menu-separator {
+    @media only screen and (max-width : 768px) {
+        border-top: 2px solid $fg-color;
+        margin: 0 8.0rem;
+        span {
+        display: none;
+        }
+    }
+    }
+}
+#menu-toggle {
+    display: none;
+    @media only screen and (max-width : 768px) {
+        &:checked + label {
+            color: $bg-color;
+        }
+        &:checked + label + ul {
+            visibility: visible;
+            opacity: 1;
+            max-height: 100rem;
+        }
+    }
+}
+
+.menu-button {
+        display: none;
+        @media only screen and (max-width : 768px) {
+        display: block;
+        font-weight: 400;
+        line-height: 6.0rem;
+        color: var(--fg-color);
+        padding-right: 10px;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            color: $accent-color
+        }
+        }
+    }
+}
+
+.navigation {
+        @media only screen and (min-width : 768px) {
+            a {
+                background:
+                    linear-gradient(to bottom, var(--accent-color) 0%, var(--accent-color) 100%);
+                    background-position: 0 100%;
+                    background-repeat: repeat-x;
+                    background-size: 1px 1px;
+                text-decoration: none;
+                transition: background-size .5s, color .5s;
+                padding: 4px;
+            }
+            a:hover {
+                color: var(--bg-color);
+                background-size: 4px 50px;
+            }
+            a:hover::after {
+                width: 0%;
+            }
+        }
+        a, span {
+            margin-left: 1.0rem;
+            margin-right: 1.0rem;
+        }
+}
+
+.navigation {
+    @media only screen and (max-width : 768px) {
+        .title {
+            a {
+                background-color: var(--accent-color);
+                color: var(--bg-color);
+                transition: background-color .5s, color .5s;
+                padding: 4px;
+            }
+            a:hover {
+                background-color: var(--bg-color);
+                color: var(--accent-color);
+            }
+            a:hover::after {
+                width: 0%;
+            }
+        }
+    }
+    .menu-button {
+        color: var(--accent-color);
+    }
+}

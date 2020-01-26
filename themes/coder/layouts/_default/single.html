@@ -1,0 +1,15 @@
+{{ define "title" }}
+    {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+    {{ $type := .Params.type }}
+    {{ if eq $type "post" }}
+        {{ partial "content/single/post.html" . }}
+    {{else if eq $type "talk" }}
+        {{ partial "content/single/talk.html" . }}
+    {{else if eq $type "resume" }}
+        {{ partial "content/single/resume.html" . }}
+    {{else if eq $type "front" }}
+        {{ partial "content/single/front.html" . }}
+    {{ end }}
+{{ end }}
