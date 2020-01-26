@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>yubikey on ecopom</title>
-    <link>/tags/yubikey/</link>
-    <description>Recent content in yubikey on ecopom</description>
+    <title>Blog on ecopom</title>
+    <link>/blog/</link>
+    <description>Recent content in Blog on ecopom</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/yubikey/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hosting a website in the Inter Planetary File System</title>
+      <link>/blog/precisionag/web-ipfs/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/precisionag/web-ipfs/</guid>
+      <description>THE WHY Here is the thing, I have no secrets of my own! Zero, zilch, zip, nada, nothing. However, this does not mean I am open to anyone to browse what I do and how I do. I like my life to be private. If somebody asks me anything (even a personal query), and if I find it reasonable (which most of the cases I do), I give the answer. I am very careful about what share and how I share.</description>
+    </item>
     
     <item>
       <title>Backing up GPG key with YubiKey, Tomb and Cryptosetup</title>

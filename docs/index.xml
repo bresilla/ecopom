@@ -13,19 +13,19 @@
     
     <item>
       <title>Hosting a website in the Inter Planetary File System</title>
-      <link>/posts/precisionag/web-ipfs/</link>
+      <link>/blog/precisionag/web-ipfs/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/precisionag/web-ipfs/</guid>
+      <guid>/blog/precisionag/web-ipfs/</guid>
       <description>THE WHY Here is the thing, I have no secrets of my own! Zero, zilch, zip, nada, nothing. However, this does not mean I am open to anyone to browse what I do and how I do. I like my life to be private. If somebody asks me anything (even a personal query), and if I find it reasonable (which most of the cases I do), I give the answer. I am very careful about what share and how I share.</description>
     </item>
     
     <item>
       <title>Backing up GPG key with YubiKey, Tomb and Cryptosetup</title>
-      <link>/posts/precisionag/gpg-yubikey-tomb/</link>
+      <link>/blog/precisionag/gpg-yubikey-tomb/</link>
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/precisionag/gpg-yubikey-tomb/</guid>
+      <guid>/blog/precisionag/gpg-yubikey-tomb/</guid>
       <description>In this short post, i will show how to generate secure GPG keys using secure liunx enviroiment and other secure linux tools.
 Steps that we&#39;&amp;lsquo;ll go through are:
  Generate a live secure enviroiment (TAILS) Generate GPG-Keys Diging secure tombs and forging keys Backing-up keys and revocation certificates Backing up keys in crypto LUKS drive  SECURE ENVIRONMENT Lets make a working folder where we create file, keys, tombs ad so on.</description>

@@ -1,6 +1,6 @@
 +++
-title = "Posts"
-slug = "posts"
+title = "Blog"
+slug = "blog"
 folders = true
 +++
 

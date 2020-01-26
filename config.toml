@@ -106,9 +106,9 @@ isHTML = true
     url = "team"
 
 [[menu.main]]
-    name = "posts"
+    name = "blog"
     weight = 4
-    url = "posts/"
+    url = "blog/"
 
 [[menu.main]]
     name = "news"
