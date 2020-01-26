@@ -16,7 +16,6 @@ credits = [
     "https://github.com/drduh/YubiKey-Guide",
     "https://spin.atomicobject.com/2013/11/24/secure-gpg-keys-guide/",
 ]
-
 [style]
     accent = "#8e2a8b"
     theme = "light"

@@ -28,7 +28,7 @@
   </url>
   
   <url>
-    <loc>/posts/linux/web-ipfs/</loc>
+    <loc>/posts/precisionag/web-ipfs/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,17 +48,17 @@
   </url>
   
   <url>
-    <loc>/posts/linux/</loc>
-    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/p2p/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/type/post/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>/posts/linux/gpg-yubikey-tomb/</loc>
+    <loc>/posts/precisionag/gpg-yubikey-tomb/</loc>
     <lastmod>2020-01-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -113,7 +113,12 @@
   </url>
   
   <url>
-    <loc>/resume/</loc>
+    <loc>/team/resume/</loc>
+    <lastmod>2016-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/team/resume/resume/</loc>
     <lastmod>2016-01-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -135,7 +140,11 @@
   </url>
   
   <url>
-    <loc>/posts/</loc>
+    <loc>/news/</loc>
+  </url>
+  
+  <url>
+    <loc>/team/</loc>
   </url>
   
 </urlset>

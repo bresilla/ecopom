@@ -47,6 +47,7 @@
     <!-- {{ with .File }}{{ .Dir }}{{ end }} -->
     {{ $thedir := (path.Join "content/" .File.Dir) }}
     {{ if not $taxo }}
+        {{ if .Params.folders }}
         <div class="mainflex" >
                 <div class="innerflex" >
                 {{ range (readDir $thedir) }}
@@ -100,6 +101,7 @@
                 }
             </script>
         </div>
+    {{ end }}
     {{ end }}
 
     <div>
